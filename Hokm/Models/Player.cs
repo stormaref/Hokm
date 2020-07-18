@@ -1,7 +1,6 @@
-﻿using System;
-namespace Hokm.Models
+﻿namespace Hokm.Models
 {
-    public class Player
+    public class Player : BaseEntity
     {
         public Player()
         {

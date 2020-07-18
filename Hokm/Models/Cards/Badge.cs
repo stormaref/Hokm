@@ -1,5 +1,4 @@
-﻿using System;
-namespace Hokm.Models.Cards
+﻿namespace Hokm.Models.Cards
 {
     public enum Badge
     {

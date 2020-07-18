@@ -1,13 +1,15 @@
-﻿using System;
+﻿using Hokm.Models.Cards;
 namespace Hokm.Models
 {
-    public class Hand
+    public class Hand : BaseEntity
     {
         public Player Player { get; set; }
-        public Cards.Card Card { get; set; }
+        public Card Card { get; set; }
 
-        public Hand()
+        public Hand(Player player, Card card)
         {
+            Player = player;
+            Card = card;
         }
     }
 }

@@ -1,13 +1,18 @@
-﻿using System;
+﻿using System.Collections.Generic;
+
 namespace Hokm.Models
 {
-    public class Round
+    public class Round : BaseEntity
     {
         public Team Winner { get; set; }
-        public Player StarterPlayer { get; set; }
-        public Hand Hand1 { get; set; }
-        public Hand Hand2 { get; set; }
-        public Hand Hand3 { get; set; }
-        public Hand Hand4 { get; set; }
+        public Player Hakem { get; set; }
+        public List<Circle> Circles { get; set; }
+        public bool IsRunning { get; set; }
+        public Round(Player hakem)
+        {
+            Hakem = hakem;
+            Circles = new List<Circle>();
+            IsRunning = true;
+        }
     }
 }
