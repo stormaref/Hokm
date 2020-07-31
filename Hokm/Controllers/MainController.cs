@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hokm.Models;
+using Microsoft.AspNetCore.Mvc;
+using Hokm.Tools;
 
 namespace Hokm.Controllers
 {
@@ -8,7 +10,12 @@ namespace Hokm.Controllers
     {
         public IActionResult Home()
         {
-            return Ok("Hey");
+            var team1 = new Team(new Player(),new Player());
+            var team2 = new Team(new Player(), new Player());
+            var game = new Game(team1, team2);
+            game.ShuffleCards();
+            var players = game.GetPlayers();
+            return Ok(players);
         }
     }
 }

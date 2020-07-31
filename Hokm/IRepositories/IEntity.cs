@@ -1,8 +1,7 @@
 ﻿using System;
-
-namespace Hokm.Models
+namespace Hokm.IRepositories
 {
-    public class BaseEntity : IEntity
+    public interface IEntity
     {
         public Guid Id { get; set; }
     }
